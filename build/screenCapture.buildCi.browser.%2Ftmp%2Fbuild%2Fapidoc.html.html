@@ -1,4 +1,4 @@
-<div class="apidocDiv">
+<html><head></head><body><div class="apidocDiv">
 <style>
 /*csslint
 */
@@ -47,17 +47,10 @@
 }
 </style>
 <h1>api documentation for
-    <a
-
-        href="https://github.com/gruntjs/grunt-contrib-stylus#readme"
-
-    >grunt-contrib-stylus (v1.2.0)</a>
+    <a href="https://github.com/gruntjs/grunt-contrib-stylus#readme">grunt-contrib-stylus (v1.2.0)</a>
 </h1>
 <h4>Compile Stylus files to CSS</h4>
-<div class="apidocSectionDiv"><a
-    href="#apidoc.tableOfContents"
-    id="apidoc.tableOfContents"
-><h1>table of contents</h1></a><ol>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.grunt-contrib-stylus">module grunt-contrib-stylus</a><ol>
 
@@ -86,18 +79,18 @@
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">grunt-contrib-stylus = function (grunt) {
-  var async = require(&#x27;async&#x27;);
-  var _ = require(&#x27;lodash&#x27;);
+  var async = require('async');
+  var _ = require('lodash');
   var compileStylus = function(srcFile, options, callback) {
     options = _.extend({filename: srcFile}, options);
 
     // Never compress output in debug mode
-    if (grunt.option(&#x27;debug&#x27;)) {
+    if (grunt.option('debug')) {
       options.compress = false;
     }
 
     var srcCode = grunt.file.read(srcFile);
-    var stylus = require(&#x27;stylus&#x27;);
+    var stylus = require('stylus');
     var s = stylus(srcCode);
 
     if (options.rawDefine) {
@@ -117,7 +110,7 @@
     }
 
     _.each(options, function(value, key) {
-      if (key === &#x27;urlfunc&#x27;) {
+      if (key === 'urlfunc') {
         // Custom name of function for embedding images as Data URI
         if (_.isString(value)) {
           s.define(value, stylus.url());
@@ -127,26 +120,26 @@
             paths: value.paths ? value.paths : []
           }));
         }
-      } else if (key === &#x27;use&#x27;) {
+      } else if (key === 'use') {
         value.forEach(function(func) {
           if (_.isFunction(func)) {
             s.use(func());
           }
         });
-      } else if (key === &#x27;define&#x27;) {
+      } else if (key === 'define') {
         for (var defineName in value) {
           s.define(defineName, value[defineName], shouldUseRawDefine(defineName));
         }
-      } else if (key === &#x27;rawDefine&#x27;) {
+      } else if (key === 'rawDefine') {
         // do nothing.
-      } else if (key === &#x27;import&#x27;) {
+      } else if (key === 'import') {
         value.forEach(function(stylusModule) {
           s.import(stylusModule);
         });
-      } else if (key === &#x27;resolve url&#x27;) {
-        s.define(&#x27;url&#x27;, stylus.resolver());
-      } else if (key === &#x27;resolve url nocheck&#x27;) {
-        s.define(&#x27;url&#x27;, stylus.resolver({nocheck: true}));
+      } else if (key === 'resolve url') {
+        s.define('url', stylus.resolver());
+      } else if (key === 'resolve url nocheck') {
+        s.define('url', stylus.resolver({nocheck: true}));
       } else {
         s.set(key, value);
       }
@@ -154,25 +147,25 @@
 
     // Load Nib if available
     try {
-      s.use(require(&#x27;nib&#x27;)());
+      s.use(require('nib')());
     } catch (e) {}
 
     s.render(function(err, css) {
       if (err) {
         grunt.log.error(err);
-        grunt.fail.warn(&#x27;Stylus failed to compile.&#x27;);
+        grunt.fail.warn('Stylus failed to compile.');
       }
       callback(css, err ? err : false);
     });
   };
 
-  grunt.registerMultiTask(&#x27;stylus&#x27;, &#x27;Compile Stylus files into CSS&#x27;, function() {
+  grunt.registerMultiTask('stylus', 'Compile Stylus files into CSS', function() {
     var done = this.async();
-    var path = require(&#x27;path&#x27;);
-    var chalk = require(&#x27;chalk&#x27;);
+    var path = require('path');
+    var chalk = require('chalk');
 
     var options = this.options({
-      banner: &#x27;&#x27;,
+      banner: '',
       compress: true
     });
 
@@ -181,15 +174,15 @@
     var filesCreatedCount = 0;
 
     if (options.basePath || options.flatten) {
-      grunt.fail.warn(&#x27;Experimental destination wildcards are no longer supported. Please refer to README.&#x27;);
+      grunt.fail.warn('Experimental destination wildcards are no longer supported. Please refer to README.');
     }
 
     async.forEachSeries(this.files, function(f, n) {
       var destFile = path.normalize(f.dest);
 
       if (options.relativeDest) {
-        destFile = path.dirname(f.dest) + &#x27;/&#x27; + options.relativeDest + &#x27;/&#x27; + path.basename(f.dest);
-        destFile = destFile.replace(&#x27;//&#x27;, &#x27;/&#x27;);
+        destFile = path.dirname(f.dest) + '/' + options.relativeDest + '/' + path.basename(f.dest);
+        destFile = destFile.replace('//', '/');
       }
 
       options.dest = destFile;
@@ -197,7 +190,7 @@
       var srcFiles = f.src.filter(function(filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {
-          grunt.log.warn(&#x27;Source file &#x22;&#x27; + filepath + &#x27;&#x22; not found.&#x27;);
+          grunt.log.warn('Source file "' + filepath + '" not found.');
           return false;
         }
         return true;
@@ -219,8 +212,8 @@
           }
         });
       }, function() {
-        if (compiled.length &#x3c; 1) {
-          grunt.log.warn(&#x27;Destination not written because compiled files were empty.&#x27;);
+        if (compiled.length &lt; 1) {
+          grunt.log.warn('Destination not written because compiled files were empty.');
         } else {
           grunt.file.write(destFile, banner + compiled.j ...</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -235,3 +228,4 @@
     ]
 </div>
 </div>
+</body></html>
