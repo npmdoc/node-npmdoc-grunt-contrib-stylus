@@ -1,9 +1,14 @@
-# api documentation for  [grunt-contrib-stylus (v1.2.0)](https://github.com/gruntjs/grunt-contrib-stylus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-stylus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-stylus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus)
+# npmdoc-grunt-contrib-stylus
+
+#### api documentation for  [grunt-contrib-stylus (v1.2.0)](https://github.com/gruntjs/grunt-contrib-stylus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-stylus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-stylus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus)
+
 #### Compile Stylus files to CSS
 
-[![NPM](https://nodei.co/npm/grunt-contrib-stylus.png?downloads=true)](https://www.npmjs.com/package/grunt-contrib-stylus)
+[![NPM](https://nodei.co/npm/grunt-contrib-stylus.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/grunt-contrib-stylus)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-contrib-stylus_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-contrib-stylus/build/screenCapture.npmPackageListing.svg)
 
@@ -129,37 +134,29 @@
     "main": "tasks/stylus.js",
     "maintainers": [
         {
-            "name": "cowboy",
-            "email": "cowboy@rj3.net"
+            "name": "cowboy"
         },
         {
-            "name": "jmeas",
-            "email": "jellyes2@gmail.com"
+            "name": "jmeas"
         },
         {
-            "name": "sapegin",
-            "email": "artem@sapegin.ru"
+            "name": "sapegin"
         },
         {
-            "name": "shama",
-            "email": "kyle@dontkry.com"
+            "name": "shama"
         },
         {
-            "name": "sindresorhus",
-            "email": "sindresorhus@gmail.com"
+            "name": "sindresorhus"
         },
         {
-            "name": "tkellen",
-            "email": "tyler@sleekcode.net"
+            "name": "tkellen"
         },
         {
-            "name": "vladikoff",
-            "email": "vlad@vladikoff.com"
+            "name": "vladikoff"
         }
     ],
     "name": "grunt-contrib-stylus",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/gruntjs/grunt-contrib-stylus.git"
@@ -170,16 +167,6 @@
     "version": "1.2.0"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module grunt-contrib-stylus](#apidoc.module.grunt-contrib-stylus)
-
-
-
-# <a name="apidoc.module.grunt-contrib-stylus"></a>[module grunt-contrib-stylus](#apidoc.module.grunt-contrib-stylus)
 
 
 
