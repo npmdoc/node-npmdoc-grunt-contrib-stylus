@@ -1,6 +1,6 @@
 # npmdoc-grunt-contrib-stylus
 
-#### api documentation for  [grunt-contrib-stylus (v1.2.0)](https://github.com/gruntjs/grunt-contrib-stylus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-stylus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-stylus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus)
+#### basic api documentation for  [grunt-contrib-stylus (v1.2.0)](https://github.com/gruntjs/grunt-contrib-stylus#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-contrib-stylus.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-contrib-stylus) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-contrib-stylus)
 
 #### Compile Stylus files to CSS
 
@@ -164,7 +164,8 @@
     "scripts": {
         "test": "grunt test"
     },
-    "version": "1.2.0"
+    "version": "1.2.0",
+    "bin": {}
 }
 ```
 
